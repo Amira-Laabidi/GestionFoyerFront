@@ -1,0 +1,63 @@
+<div class="reservations-container">
+    <!-- Header -->
+     <div style="display: flex; justify-content: space-between;">
+        <div class="header">
+            <h2>Reservations</h2>
+            <p>You currently have "<strong>{{ pendingRequestsCount }} request</strong>"</p>
+          </div>
+            <!-- Search and Category -->
+    <div class="actions">
+       
+        
+     
+        <button class="add__reservation__card-button" style="width: 100%;">Add Reservation</button>
+      </div>
+     </div>
+    
+    <!-- Tabs -->
+    <div class="tabs">
+      <button
+        *ngFor="let tab of tabs"
+        [class.active]="tab === activeTab"
+        (click)="setActiveTab(tab)"
+      >
+        {{ tab }}
+      </button>
+    </div>
+    <div class="search-container">
+      <div class="search-container-input">
+          <mat-icon matPrefix>search</mat-icon>
+          <input style="border: none;" matInput type="text" placeholder="Search" />
+      </div>
+      
+ 
+    </div>
+
+  
+    <div class="reservations-list">
+      <div
+        *ngFor="let reservation of filteredReservations"
+        class="reservation-item"
+      >
+        <div class="icon">
+          <!-- Replace with actual icons -->
+          📅
+        </div>
+        <div class="content">
+          <p>
+            <strong>{{ reservation.title }}</strong>
+            {{ reservation.message }}
+          </p>
+          <span>{{ reservation.time }}</span>
+        </div>
+        <div *ngIf="reservation.hasActions" class="actions">
+          <button class="decline">Delete</button>
+          <button class="decline" style="background-color: rgb(108, 108, 52);">Decline</button>
+          <button class="accept">Accept</button>
+        </div>
+      </div>
+    </div>
+  
+
+  </div>
+  

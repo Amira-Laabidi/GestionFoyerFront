@@ -1,0 +1,127 @@
+  .navbar-sidenav-container {
+    display: flex;
+    height: 100vh; 
+  
+  }
+  
+  /* Sidenav Styles */
+  .sidenav {
+    min-width: 250px; /* Set minimum width */
+    /* background-color: #ffffff; /* Sidebar background color set to white */
+    /* color: #333333; /* Dark text color for better contrast */
+    /* border-right: 1px solid #ddd; /* Soft border on the right */
+    /* box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Reduced shadow effect */
+    /* overflow: auto; /* Enable scrolling */
+  }
+  
+  /* Subheader Styles */
+  .sidenav h3[mat-subheader] {
+    /* color: #555555; /* Darker color for subheaders */
+    margin: 16px 0 8px 16px; /* Margin for spacing */
+    font-size: 1.2rem; /* Subheader font size */
+  }
+  
+  /* Active List Item Styles */
+  a.mat-list-item.active {
+    background: rgba(63, 81, 181, 0.1); /* Light blue background for active item */
+  }
+  
+  /* Hover Effects for List Items */
+  .sidenav a[mat-list-item]:hover {
+    background-color: rgba(63, 81, 181, 0.1); /* Light blue hover effect */
+  }
+  
+  /* List Items Text Color */
+  .sidenav a[mat-list-item] {
+    color: #333333; /* Default text color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  }
+  
+  /* Bottom Push Element */
+  #push-bottom {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+  }
+  
+  /* Divider Styles */
+  mat-divider {
+    margin: 8px 0; /* Margin for the divider */
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    z-index: 2;
+    background-color: #ffffff; /* Navbar background color */
+    color: #494f4b; /* Navbar text color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for the navbar */
+  }
+  
+  /* Ensure Navbar stays on top */
+  .navbar-is-mobile .navbar {
+    position: fixed;
+  }
+  
+  /* Additional Styling for Better Visuals */
+  .navbar-brand {
+    color: #3f51b5; /* Brand color */
+    font-weight: bold; /* Bold font for brand */
+  }
+  
+  .mat-icon {
+    transition: color 0.3s; /* Smooth icon color transition */
+  }
+  
+  /* Styling for menu items to match */
+  .mat-list-item {
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition effects */
+  }
+  
+  /* Scale effect on hover for list items */
+  .sidenav a.mat-list-item:hover {
+    transform: scale(1.02); /* Slight scaling on hover for effect */
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center; /* Center items vertically */
+  }
+  
+  .mat-icon {
+    margin-right: 16px; /* Space between the icon and text */
+    font-size: 24px; /* Adjust icon size if needed */
+  }
+  
+  p[mat-line] {
+    margin: 0; /* Remove default margin for proper alignment */
+    line-height: 1; /* Optional: Adjust line-height for better spacing */
+  }
+  
+  /* Subheader Styles */
+  .sidenav h3[mat-subheader] {
+    /*background-color: #3f51b5; /* Background color */
+    color: #000000; /* Text color */
+    padding: 5px; /* Padding around the text */
+    border-radius: 150px; /* Rounded corners */
+    margin: 0 0 16px 0; /* Margin below the subheader */
+    font-size: 1.2rem; /* Font size */
+    font-weight: bold; /* Bold font */
+    text-align: left; /* Center text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Optional: Add a gradient effect */
+  .sidenav h3[mat-subheader]:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    /* background: linear-gradient(rgb(117, 236, 200), rgb(178, 83, 187), rgba(232, 121, 245, 0.895)); */
+    z-index: -1; /* Behind the text */
+    border-radius: 4px;
+  }

@@ -1,0 +1,88 @@
+<div class="background">
+  <div class="card">
+    <mat-card class="example-card" appearance="outlined">
+      <mat-toolbar color="primary" class="space">
+        <mat-icon>home</mat-icon>
+        Signup page
+      </mat-toolbar>
+
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title></mat-card-title>
+        <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <form #userForm="ngForm" class="login-form" (ngSubmit)="onSubmit(userForm)">
+          <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+
+            <input
+              type="email"
+              name="email"
+              matInput            
+              placeholder="Ex. pat@example.com"
+              [(ngModel)]="user.email"
+              required
+              #email="ngModel"
+            />        
+          </mat-form-field>
+          <div *ngIf="email.invalid && email.touched " class="text-danger">
+            please enter your email address
+         </div>
+          <mat-form-field class="example-full-width">
+            <mat-label>age</mat-label>
+            <input
+              name="age"
+              matInput
+              type="number"
+              placeholder="Ex. pat@example.com"
+              [(ngModel)]="user.age"
+              #age="ngModel"
+              required
+              min="18"
+            />           
+          </mat-form-field>
+          <div *ngIf="age.invalid && age.touched " class="text-danger">
+            Age is required and must be at least 18
+         </div>
+          <mat-form-field class="example-full-width">
+            <mat-label>Enter your password</mat-label>
+            <input
+              matInput
+                name="password"
+              [type]="password ? 'password' : 'text'"
+              [(ngModel)]="user.passowrd"
+            />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide()"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide()"
+            >
+              <mat-icon>{{
+                hide() ? "visibility_off" : "visibility"
+              }}</mat-icon>
+            </button>
+          </mat-form-field>
+
+          <section class="example-section">
+            <mat-checkbox class="example-margin">Remember me</mat-checkbox>
+          </section>
+          <mat-card-actions class="card__actions">
+         
+            <button class="link__button" mat-button>Forgot Password</button>
+            <button [disabled]="userForm.invalid" mat-raised-button class="login__button" type="submit">
+              signup
+            </button>
+            <div class="card__actions-footer">
+              <span>Don't have an account</span>
+              <a mat-button routerLink="/auth/signup">Create an account</a>
+            </div>
+          </mat-card-actions>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

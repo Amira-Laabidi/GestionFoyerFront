@@ -1,0 +1,52 @@
+.transaction-card {
+    border-bottom: 1px solid #ddd;
+   
+    padding: 16px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+   
+  }
+  
+  .transaction-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .arrow-icon {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 8px;
+  }
+  
+  .red-arrow .arrow-icon {
+    background: red;
+    transform: rotate(45deg);
+  }
+  
+  .green-arrow .arrow-icon {
+    background: green;
+    transform: rotate(-45deg);
+  }
+  
+  .transaction-type {
+    font-weight: bold;
+  }
+  
+  .transaction-details {
+    text-align: right;
+  }
+  
+  .transaction-date {
+    display: block;
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .transaction-amount {
+    font-weight: bold;
+    font-size: 14px;
+  }

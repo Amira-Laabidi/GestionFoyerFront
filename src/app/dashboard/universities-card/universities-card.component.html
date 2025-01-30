@@ -1,0 +1,25 @@
+<div class="card-container">
+    <div class="influencer-card" *ngFor="let influencer of influencers">
+      <div class="influencer-image">
+        <img [src]="influencer.image" alt="{{ influencer.name }}" />
+      </div>
+      <div class="influencer-details">
+        <h3 class="influencer-name">{{ influencer.name }}</h3>
+        <p class="influencer-followers">{{ influencer.followers | number }} followers</p>
+        <div class="social-icons">
+          <img *ngFor="let icon of influencer.socialIcons" [src]="icon" class="icon" />
+        </div>
+      </div>
+     <div style="display: flex;" *ngIf="canEdit"> 
+      <button mat-icon-button color="accent" (click)="startEdit()">
+      <mat-icon aria-label="Edit">edit</mat-icon>
+    </button>
+
+    <button mat-icon-button color="accent" (click)="startEdit()">
+      <mat-icon aria-label="Delete">delete</mat-icon>
+    </button></div>
+   
+       
+     
+    </div>
+  </div>

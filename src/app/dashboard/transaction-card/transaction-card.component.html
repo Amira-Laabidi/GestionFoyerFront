@@ -1,0 +1,12 @@
+<div class="transaction-card" *ngFor="let transaction of transactions">
+    <div class="transaction-header">
+      <span [class]="transaction.type === 'Subscription Payment' ? 'red-arrow' : 'green-arrow'">
+        <i class="arrow-icon"></i>
+      </span>
+      <span class="transaction-type">{{ transaction.type }}</span>
+    </div>
+    <div class="transaction-details">
+      <span class="transaction-date">{{ transaction.date }}</span>
+      <span class="transaction-amount">{{ transaction.amount | currency }}</span>
+    </div>
+  </div>

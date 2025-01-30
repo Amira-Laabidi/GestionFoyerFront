@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.add__reservation__card-button {
+    background-color: white;
+    color: #0038ce;
+    border-radius: 4px;
+    border: 1px solid #b0abab;
+    width: 50%;
+    height: 28px;
+    font-weight: 600;
+  }
+
+  .search-container-input {
+    display: flex;
+    border: 1px solid #99999a;
+    border-radius: 5px;
+    padding: 4px;
+    margin-right: 4px;
+  }

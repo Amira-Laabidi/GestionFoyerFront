@@ -1,0 +1,26 @@
+<div class="profile-container" fxLayout="row" fxLayoutAlign="center center">
+    <div fxFlex="80%">
+      <mat-card class="profile-card">
+        <mat-card-content>
+          <h2 class="profile-title">My Profile</h2>
+          <div class="profile-content">
+            <div class="profile-details">
+              <app-profile-details></app-profile-details>
+            </div>
+            <div fxFlex></div>
+            <div class="profile-tabs">
+              <mat-tab-group>
+                <mat-tab label="Profile Form">
+                  <app-profile-form></app-profile-form>
+                </mat-tab>
+                <!-- Uncomment if needed -->
+                <!-- <mat-tab label="Change Password">
+                  <app-change-password></app-change-password>
+                </mat-tab> -->
+              </mat-tab-group>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>

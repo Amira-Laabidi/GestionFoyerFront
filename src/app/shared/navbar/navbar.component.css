@@ -1,0 +1,94 @@
+
+.left__navbar{
+  display: flex;
+  align-items: center;
+}
+
+
+
+.right__navbar{
+display: flex; 
+align-items: center;
+}
+
+.navbar__style {
+
+background: white; 
+color: #110f0f; 
+display: flex;
+justify-content: space-between;
+box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.1);
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+
+}
+
+.left__navbar span {
+font-size: 1.5rem;
+font-weight: bold;
+color: black;
+}
+
+.left__navbar mat-icon {
+color: #f25ddce1; /* Icon color */
+
+}
+
+.navbar-search-container{
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.right__navbar {
+display: flex;
+align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+input[matInput]:focus {
+  outline: none; 
+  border: none;  
+  box-shadow: none; 
+}
+
+.right__navbar .demo-section button {
+/* color: #f25ddce1; */
+padding-left: 25px;
+padding-top: 20px;
+}
+
+.right__navbar mat-icon {
+/* color: #f25ddce1; */
+}
+
+.right__navbar button[mat-button] {
+color: #e6e4e5;
+font-weight: 500;
+font-size: 1rem;
+}
+
+.align{
+display: flex;
+align-items: center;
+}
+
+.icon-circle {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Make it a perfect circle */
+  background-color: #78909c; /* Match the color you want */
+  border-radius: 50%; /* Makes it circular */
+  display: flex;
+  align-items: center; /* Centers the icon vertically */
+  justify-content: center; /* Centers the icon horizontally */
+  color: white; /* Icon color */
+}
+
+.icon-circle mat-icon {
+  font-size: 24px; /* Adjust icon size */
+}

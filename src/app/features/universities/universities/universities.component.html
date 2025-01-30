@@ -1,0 +1,35 @@
+<div class="reservations-container">
+    <!-- Header -->
+     <div style="display: flex; justify-content: space-between;">
+        <div class="header">
+            <h2>Universities</h2>
+            <p>manage universities</p>
+          </div>
+            <!-- Search and Category -->
+    <div class="actions">       
+        <button class="add__reservation__card-button" style="width: 100%;">Add New University</button>
+      </div>
+     </div>
+    
+    <!-- Tabs -->
+    <div class="tabs">
+      <button
+        *ngFor="let tab of tabs"
+        [class.active]="tab === activeTab"
+        (click)="setActiveTab(tab)"
+      >
+        {{ tab }}
+      </button>
+    </div>
+    <div class="search-container">
+      <div class="search-container-input">
+          <mat-icon matPrefix>search</mat-icon>
+          <input style="border: none;" matInput type="text" placeholder="Search" />
+      </div>
+      
+ 
+    </div>
+
+    <app-universities-card [canEdit]="true"></app-universities-card>
+  </div>
+  

@@ -1,0 +1,32 @@
+<div>
+    <h3 class="pink-text">Use the form below to change your password.</h3>
+
+    <div fxLayout="row" fxLayoutAlign="center stretch">
+
+        <div fxFlex="60%">
+
+            <mat-form-field class="full-width">
+                <mat-label>Name</mat-label>
+                <input matInput >
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>email</mat-label>
+                <input matInput >
+              </mat-form-field>
+
+              <mat-form-field class="full-width">
+                <mat-label>Address</mat-label>
+                <input matInput >
+              </mat-form-field>
+
+
+            <div style="display: flex; justify-content: space-between">
+                <button mat-raised-button class="pink-button" (click)="changePassword()">Save</button>
+                <button mat-raised-button class="pink-button" (click)="goToChangePassword($event)">change password</button>
+            </div>
+         
+
+        </div>
+    </div>
+</div>

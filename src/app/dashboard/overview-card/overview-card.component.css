@@ -1,0 +1,75 @@
+.carousel-container {
+    width: 400px;
+    margin: auto;
+  }
+  
+  .campaign-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .campaign-header {
+    color: #f7b731;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .campaign-body .icon {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    margin: 8px 0;
+  }
+  
+  p {
+    color: #888;
+    font-size: 0.9rem;
+  }
+  
+  .status {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background-color: #e0f8e4;
+    color: #28a745;
+    font-weight: bold;
+  }
+  
+  .influencer-section {
+    margin: 12px 0;
+  }
+  
+  .influencer-section span {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: #888;
+  }
+  
+  .avatars img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin: 0 4px;
+    object-fit: cover;
+  }
+  
+  .details-button {
+    background-color: #4e73df;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .details-button:hover {
+    background-color: #375ac7;
+  }

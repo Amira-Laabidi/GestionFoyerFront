@@ -1,0 +1,65 @@
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  .influencer-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .influencer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .influencer-image img {
+    width: fit-content;
+    height: 50px;    
+    margin-bottom: 0px;
+  }
+  
+  .influencer-name {
+    font-size: 1.2em;
+    margin:0px 8px 8px 4px;
+  }
+  
+  .influencer-followers {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .add-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-button:hover {
+    background-color: #0056b3;
+  }

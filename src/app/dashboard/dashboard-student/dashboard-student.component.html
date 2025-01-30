@@ -1,0 +1,89 @@
+<div>
+    <div>
+        <h2 style="margin-bottom: 0px;">Home</h2>       
+        <p>Foyer details overview and analytics</p>
+    </div>
+    <div class="card__components">
+        <div class="add__student__card">
+            <h1 class="add__student__card-title">
+                You Room Number is 12
+            </h1>
+            <h3 class="add__student__card-subtitle">
+                click this button to request another Room
+            </h3>
+            <button 
+         
+             class="add__student__card-button">request room</button>
+        </div>
+
+        <div class="add__reservation__card">
+            <p style="text-align: center; color: #F7C041; font-weight: 500;padding-bottom: 24px;">Maintenance</p>
+            <div class="add__reservation__card-style" >
+                <div class="top__search__icon">                   
+                    <span class="material-icons">build</span>
+                </div>
+               
+                <h1 class="add__reservation__card-title">
+                    Submit maintenance requests !
+                </h1>
+                <h3 class="add__reservation__card-subtitle">
+                    click this button to add new Maintenance Request
+                </h3>
+                <button class="add__reservation__card-button"
+                 
+                 >request maintenance</button>
+            </div>
+            
+        </div>
+
+
+        <div class="search__student__card">
+            <div class="top__search__icon">
+                <mat-icon matPrefix>search</mat-icon>
+            </div>
+           
+            <div class="request-status-card">
+                <!-- Request Status List -->
+                <div class="status-container-item" *ngFor="let request of requests">
+                  <mat-card>
+                    <mat-card-header>
+                      <mat-card-title>{{ request.title }}</mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                      <div class="status-content">
+                        <span>{{ request.description }}</span>
+                        <div class="status-badge">
+                          <mat-icon [ngClass]="getStatusIcon(request.status)">{{ getStatusIcon(request.status) }}</mat-icon>
+                          <span [ngClass]="getStatusClass(request.status)">{{ request.status }}</span>
+                        </div>
+                      </div>
+                    </mat-card-content>
+                  </mat-card>
+                </div>
+              </div>
+         
+        </div>
+
+       
+    </div>
+
+    <div class="bottom__containers" >
+        <div class="bottom__card">
+            <div class="bottom__card-header">
+                <p style="font-weight: 500;">Your Payment history</p>
+                <p style="color: #194AD3; font-weight: 500;"><a routerLink="/home/reservation">See details</a></p>            
+            </div>
+            <app-transaction-card></app-transaction-card>
+        </div>
+
+        <div class="bottom__card">
+            <div class="bottom__card-header">
+                <p style="font-weight: 500;" >Universities</p>
+                <p style="color: #194AD3; font-weight: 500;"><a routerLink="/home/universities">See All Universities</a></p>            
+            </div>
+            <app-universities-card></app-universities-card>
+        </div>
+    </div>
+
+</div>
+

@@ -1,0 +1,59 @@
+
+ /* Flex layout adjustments */
+ [fxLayout="row"] {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Form field styling */
+  .full-width {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .mat-form-field {
+    background-color: #c76daf;
+    border-radius: 4px;
+  }
+  
+  .mat-form-field-appearance-fill .mat-form-field-flex {
+    padding: 0 12px;
+  }
+  
+  .mat-form-field-label {
+    color: #666;
+    font-weight: 500;
+  }
+  
+  /* Input field styling */
+  input.mat-input-element {
+    padding: 12px 0;
+    font-size: 1rem;
+  }
+  
+  input::placeholder {
+    color: #999;
+    opacity: 1;
+  }
+  
+  /* Icon button styling */
+  .mat-icon {
+    cursor: pointer;
+    color: #d412bb;
+    transition: color 0.3s;
+  }
+  
+  .mat-icon:hover {
+    color: #1c2b9a;
+  }
+
+  .pink-button {
+    color: white; /* Text color */
+    background-color: red;
+    &:hover {
+        background-color: #ac6fac; /* Darker pink on hover */
+    }
+}
+.pink-text {
+    color: #d5006d; /* Change to your desired pink color */
+}

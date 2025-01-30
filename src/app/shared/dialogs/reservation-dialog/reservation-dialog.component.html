@@ -1,0 +1,39 @@
+<div class="container">
+    <h3 mat-dialog-title class="dialog-title">Add New Reservation</h3>
+  
+    <form class="mat-dialog-content form-container" (ngSubmit)="submit" #formControl="ngForm">
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Student ID</mat-label>
+        <input matInput placeholder="Enter ID" [(ngModel)]="data.id" name="id" required>
+        <mat-error *ngIf="formControl.invalid">{{ getErrorMessage() }}</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Student Name</mat-label>
+        <input matInput placeholder="Enter Name" [(ngModel)]="data.name" name="name" required>
+        <mat-error *ngIf="formControl.invalid">{{ getErrorMessage() }}</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Class</mat-label>
+        <input matInput placeholder="Enter Class" [(ngModel)]="data.class" name="class" required>
+        <mat-error *ngIf="formControl.invalid">{{ getErrorMessage() }}</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Enter Email" [(ngModel)]="data.email" name="email">
+        <mat-error *ngIf="formControl.invalid">{{ getErrorMessage() }}</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Date of Enrollment</mat-label>
+        <input matInput type="date" [(ngModel)]="data.enrollmentDate" name="enrollmentDate">
+      </mat-form-field>
+  
+      <div mat-dialog-actions class="action-buttons">
+        <button mat-raised-button color="primary" [type]="submit" [disabled]="!formControl.valid" (click)="confirmAdd()">Save</button>
+        <button mat-raised-button color="warn" (click)="onNoClick()">Cancel</button>
+      </div>
+    </form>
+  </div>
